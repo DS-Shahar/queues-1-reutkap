@@ -1,4 +1,3 @@
-package test;
 public class Lesson {
 	public static boolean inRow (Queue <Integer> que, int num) {
 		boolean flag = false;
