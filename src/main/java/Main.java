@@ -134,6 +134,25 @@ public class Main {
 		//		System.out.println(q6(q1_isIn));
 		//		System.out.println((q1_isIn));
 	}
+		public static boolean inRow (Queue <Integer> q, int num) {
+		boolean flag = false;
+		q.insert(null);
+		while (q.head() != null) {
+			if (q.head() == num) {
+				q.insert(q.remove());;
+			}
+			if(q.head() != null) {
+				if (q.head() == num) {
+					flag = true;
+				}
+			}
+			if (q.head() != null) {
+				q.insert(q.remove());
+			}
+		}
+		q.remove();
+		return flag;
+	}
 	public static <T> int countTimes (Queue <T> q, T x){
 		q.insert(null);
 		int count = 0;
