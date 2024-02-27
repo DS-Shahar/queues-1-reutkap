@@ -71,18 +71,27 @@ public class Main {
 		}
 		return flag;
 	}
-	public static <T> Queue <T> q8 (Queue <T> q){
-		Queue <T> q2 = new Queue <T> ();
-		while (!q.isEmpty()) {
-			if (countTimes(q,q.head())>1) {
-				q.remove();
+	public static <T> Queue<T> q8(Queue<T> q){
+		int c = 1;
+		q.insert(null);
+		while(q.head()!=null) {
+			T x = q.head();
+			q.insert(q.remove());
+			while(q.head()!=null) {
+				if(q.head()==x)
+					q.remove();
+				if(q.head()!=null)
+					q.insert(q.remove());
 			}
-			q2.insert(q.remove());
+			q.insert(q.remove());
+			for (int i = 0; i < c; i++) {
+				q.insert(q.remove());
+			}
+			c++;
 		}
-		while (!q2.isEmpty()) {
-			q.insert(q2.remove());
-		}
+		q.remove();
 		return q;
+	}
 	}
 	public static Queue<Integer> q9(Queue<Integer> q){
 		q.insert(null);
