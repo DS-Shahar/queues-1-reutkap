@@ -1,4 +1,3 @@
-package test;
 public class Job {
 	private String code;
 	private int time;
