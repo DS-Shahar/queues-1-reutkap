@@ -1,5 +1,4 @@
-package test;
-public class akkl {
+public class Class1 {
 	public static void service_q6 (Queue <Job> q, int time) {
 		q.insert(null);
 		while (q.head() != null && time != 0 && q.head().getTime()<= time) {
