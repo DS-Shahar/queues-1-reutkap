@@ -1,4 +1,15 @@
 public class Class1 {
+	public static Queue <Ball> q4 (String [] arr, int n){
+		Queue <Ball> q = new Queue <Ball> ();
+		boolean [] size = {true, false};
+		for (int i = 0; i < n; i++) {
+			int r = (int) (Math.random()*5);
+			int s = (int) (Math.random()*2);
+			Ball b = new Ball (arr[r], size [s]);
+			q.insert(b);
+		}
+		return q;
+	}
 	public static void service_q6 (Queue <Job> q, int time) {
 		q.insert(null);
 		while (q.head() != null && time != 0 && q.head().getTime()<= time) {
@@ -47,6 +58,7 @@ public class Class1 {
 		System.out.println(qu2);
 		service_q6(qu2,180);
 		System.out.println(qu2);
+		String [] a = {"blue", "red", "white", "yellow", "gold"};
+		System.out.println(q4(a,14));
 	}
-
 }
