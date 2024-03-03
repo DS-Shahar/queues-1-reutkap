@@ -1,4 +1,3 @@
-package test;
 public class Wolter {
 	private String id;
 	private int cc;
